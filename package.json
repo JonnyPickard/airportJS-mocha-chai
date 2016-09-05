@@ -1,0 +1,11 @@
+{
+  "name": "airport-challenge-mocha",
+  "version": "1.0.0",
+  "description": "TDD airport challenge with mocha",
+  "main": "airport.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jonny Pickard",
+  "license": "ISC"
+}
