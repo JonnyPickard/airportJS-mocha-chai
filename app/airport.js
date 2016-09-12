@@ -1,6 +1,7 @@
 var Airport = (function(){
   var name = "";
   var location = "";
+  var planes = [];
 
   function setName(newName) {
     this.name = newName;
@@ -10,9 +11,15 @@ var Airport = (function(){
     this.location = location;
   }
 
+  function landPlane(plane) {
+    planes.push(plane);
+  }
+
   return {
     setName: setName,
-    setLocation: setLocation
+    setLocation: setLocation,
+    landPlane: landPlane,
+    planes: planes
   };
 
 })();

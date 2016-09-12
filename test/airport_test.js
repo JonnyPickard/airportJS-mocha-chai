@@ -2,6 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 var Airport = require("../app/airport").airport;
+var plane = require("../app/plane").plane;
 
 describe("Airport", function(){
 
@@ -19,10 +20,10 @@ describe("Airport", function(){
     });
   });
 
-  // describe("#landPlane", function(){
-  //   it("Should store the plane object", function(){
-  //     Airport.landPlane("London");
-  //     expect(Airport.location).to.equal("London");
-  //   });
-  // });
+  describe("#landPlane", function(){
+    it("Should store the plane object", function(){
+      Airport.landPlane(plane);
+      expect(Airport.planes).to.contain(plane);
+    });
+  });
 });
