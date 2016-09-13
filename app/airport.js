@@ -1,6 +1,4 @@
 var Airport = (function(){
-  var name = "";
-  var location = "";
   var planes = [];
 
   function setName(newName) {
@@ -15,10 +13,19 @@ var Airport = (function(){
     planes.push(plane);
   }
 
+  function takeOffPlane(plane) {
+    var index = planes.indexOf(plane);
+
+    if (index > -1) {
+      planes.splice(index, 1);
+    }
+  }
+
   return {
     setName: setName,
     setLocation: setLocation,
     landPlane: landPlane,
+    takeOffPlane: takeOffPlane,
     planes: planes
   };
 
